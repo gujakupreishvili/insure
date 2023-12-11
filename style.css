@@ -1,0 +1,462 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+header{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px;
+  padding-bottom: 0px;
+  height: 80px;
+  width: 100%;
+  background-color: white;
+}
+.hamburger{
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid #2C2830;
+  background: #FFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.hamburger-rect{
+  width: 16px;
+  height: 1.5px;
+  background-color: hsla(271, 9%, 17%, 1);
+  transition: all 0.3s ease-in-out;
+}
+.hamburger-rect::before,
+.hamburger-rect::after{
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 1.5px;
+  background-color: hsla(271, 9%, 17%, 1);
+  transition: all 0.3s ease-in-out;
+}
+.hamburger-rect::before{
+  transform: translateY(-8px);
+}
+.hamburger-rect::after{
+  transform: translateY(8px);
+}
+/* animation */
+.hamburger.open .hamburger-rect{
+  transform: translateX(0px);
+  background: transparent;
+}
+.hamburger.open .hamburger-rect::before{
+  transform: rotate(45deg);
+}
+.hamburger.open .hamburger-rect::after{
+  transform: rotate(-45deg);
+}
+main{
+  display: flex;
+  flex-direction: column;
+}
+.family-img{
+  width: 100%;
+}
+.section1-textdiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  background-color: hsla(257, 26%, 20%, 1);
+  background-image: url(./img/up\ ring.svg),url(./img/down\ ring.png);
+  background-repeat: no-repeat;
+  background-position-x: -80px,110%;
+  background-position-y: -210px, 240%;
+}
+.text-div-first{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+.text-div-first h1{
+  font-size: 48px;
+  font-weight: 400;
+  font-family: DM Serif Display;
+  text-align: center;
+  color:hsla(0, 0%, 100%, 1);
+  line-height: 48px;
+}
+.text-div-first p{
+  font-size: 16px;
+  font-weight: 400;
+  font-family: Karla;
+  color: hsla(0, 0%, 100%, 1);
+  text-align: center;
+  line-height: 26px;
+}
+.text-div-first button{
+  width: 146px;
+  height: 40px;
+  border: 1.5px solid #FFF;
+  background-color: #2D2641;
+  color: white;
+  font-family: Karla;
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 16px;
+}
+.text-div-first button:hover{
+  background-color: white;
+  color: black;
+  transition: 1s;
+}
+.section2-div{
+  display: flex;
+  flex-direction: column;
+  margin-top: 140px;
+  align-items: center;
+}
+.ltl-rect{
+  width: 150px;
+  height: 1px;
+  background-color: hsla(296, 30%, 68%, 1);
+}
+.differnt{
+  color: #2C2830;
+  text-align: center;
+  font-family: DM Serif Display;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 48px;
+  margin-bottom: 80px;
+  margin-top: 40px;
+  
+}
+.snappy-div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 56px;
+}
+.snappy-div h3{
+  color: #2C2830;
+  text-align: center;
+  font-family: DM Serif Display;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.389px;
+  margin-bottom: 16px;
+}
+.snappy-div p{
+  color: #837D88;
+  text-align: center;
+  font-family: Karla;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px; 
+}
+.section3-div{
+  width: 327px;
+  height: 344px;
+  background-color: #2D2641;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  gap: 40px;
+  background-image: url(./img/ring3.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-position-y: -1px;
+}
+.section3-div h1{
+  text-align: center;
+  color: white;
+  font-family: DM Serif Display;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+}
+.section3-div button{
+  width: 160px;
+  height: 40px;
+  background-color: #2D2641;
+  border: 1px solid white; 
+  color: #FFF;
+  text-align: center;
+  font-family: Karla;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.5px;
+}
+.section3-div button:hover{
+  background-color: white;
+  color: black;
+  transition: 1s;
+}
+footer{
+  display: flex;
+  flex-direction: column;
+  background-image: url(./img/ring\ 4.svg);
+  background-color: hsla(0, 0%, 98%, 1);
+  margin-top: 140px;
+  background-repeat: no-repeat;
+}
+.logo-footer-div{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  margin-top: 88px;
+}
+.icon-div{
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  margin-bottom: 80px;
+}
+.ul-div{
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 88px;
+}
+li{
+  list-style: none;
+}
+ul{
+  display: flex;
+  flex-direction: column;
+  gap:16px;
+  margin-top: 46px;
+}
+.first-li{
+  color: #837D88;
+  text-align: center;
+  font-family: Karla;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.5px;
+  margin-bottom: 36px;
+}
+.other-li{
+  color: #2D2641;
+  text-align: center;
+  font-family: Karla;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.5px;
+}
+.nav-ul{
+  display: none;
+}
+.family-img-desktop{
+  display: none;
+}
+@media(min-width:1024px){
+  header{
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+  .nav-ul{
+    display: block;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: -3px;
+  }
+  .hamburger{
+    display: none;
+  }
+  .family-img{
+    display: none;
+  }
+  .family-img-desktop{
+    display: block;
+    position: absolute;
+    right: 10%;
+    top: 20%;
+  }
+  .section-1div{
+    position: relative;
+  }
+  .section1-textdiv{
+    width: 100%;
+    height: 600px;
+    background-image: url(./img/up\ ring\ desktop.png),url(./img/down\ ring\ desktop.png);
+    background-position-x: 100%,-20px;
+    background-position-y: -90px, 360px;
+    align-items: start;
+    margin-bottom: 305px;
+  }
+  .text-div-first{
+    align-items: start;
+    width: 540px;
+    padding-left: 115px;
+    
+  }
+  .text-rect{
+    width: 150px;
+    height: 1px;
+    background-color: #FFFFFF;
+    margin-bottom: 60px;
+  }
+  .text-div-first h1{
+    text-align: start;
+    font-size: 72px;
+    line-height: 64px;
+    width: 540px;
+  }
+  .text-div-first p{
+    font-size: 16px;
+    text-align: start;
+    width: 540px;
+  }
+  #view-plans{
+    width: 146px;
+    height: 40px;
+    border: 1.5px solid #2C2830;
+    background: #2C2830;
+    color: #FFF;
+    text-align: center;
+    font-family: Karla;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.5px;
+    padding-top: 10px;
+    cursor: pointer;
+  }
+  .nav-ul li{
+   color: #837D88;
+   text-align: center;
+   font-family: Karla;
+   font-size: 13px;
+   font-style: normal;
+   font-weight: 700;
+   line-height: normal;
+   letter-spacing: 1.5px;
+   cursor: pointer;
+  }
+  .nav-ul li:hover{
+    color: #2C2830;
+    transition: 1s;
+  }
+  .differnt{
+    font-size: 72px;
+    margin-bottom: 96px;
+  }
+  .offers-div{
+    display: flex;
+    flex-direction: row;
+  }
+  .section2-div{
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+  .snappy-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+    text-align: start;
+  }
+  .offers-div{
+    gap: 30px;
+    justify-content: space-around;
+    width: 100%;
+    margin-left: -50px;
+  }
+  .snappy-div h3{
+    text-align: start;
+    width: 350px;
+  }
+  .snappy-div p{
+    text-align: start;
+    width: 350px;
+  }
+  .ligthning{
+    margin-bottom: 32px;
+  }
+  .section3-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 1110px;
+    height: 250px;
+    margin-top: 158px;
+    background-image: 100px;
+    background-image: url(./img/ring\ \ for\ section3.png);
+    background-repeat: no-repeat;
+  }
+  .section3-div h1{
+    text-align: start;
+    font-size: 56px;
+    width: 490px;
+  }
+  footer{
+    background-image: url(./img/footer\ ring\ desktop.png);
+    background-repeat: no-repeat;
+  }
+  .logo-footer-div{
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 115px;
+    padding-right: 115px;
+  }
+  .rect-footer{
+    width: 87%;
+    height: 1px;
+    background-color: #DADADA;
+    margin-left: 115px;
+    padding-right: 115px;
+    margin-top: 33px;
+    margin-bottom: 48px;
+  }
+  .ul-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .first-li{
+    text-align: start;
+  }
+  .other-li{
+    text-align: start;
+  }
+  .icon-div{
+    margin-bottom: 0px;
+  }
+ 
+  
+
+}
