@@ -81,6 +81,7 @@ main{
   background-repeat: no-repeat;
   background-position-x: -80px,110%;
   background-position-y: -210px, 240%;
+  margin-top: -5px;
 }
 .text-div-first{
   display: flex;
@@ -339,8 +340,8 @@ ul{
     width: 146px;
     height: 40px;
     border: 1.5px solid #2C2830;
-    background: #2C2830;
-    color: #FFF;
+    background: white;
+    color: #2C2830;
     text-align: center;
     font-family: Karla;
     font-size: 13px;
@@ -350,6 +351,10 @@ ul{
     letter-spacing: 1.5px;
     padding-top: 10px;
     cursor: pointer;
+  }
+  #view-plans:hover{
+    background-color: #2D2641;
+    color: white;
   }
   .nav-ul li{
    color: #837D88;
